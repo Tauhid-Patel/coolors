@@ -105,7 +105,10 @@ function hslControls(e) {
         .set('hsl.l', brightness.value)
         .set('hsl.h', hue.value);
 
-    colorDivs[index].style.backgroundColor = color;    
+    colorDivs[index].style.backgroundColor = color;   
+    
+    // update color of inputs/sliders
+    colorizeSliders(color, hue, brightness, saturation);
 }
 
 function updateTextUI(index) {
